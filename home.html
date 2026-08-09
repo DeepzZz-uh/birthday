@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>The Story of Us</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="story-page">
+
+    <nav class="navbar">
+    <h1 class="logo">NETFLIX</h1>
+
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">TV Shows</a>
+        <a href="#">Movies</a>
+        <a href="#">Latest</a>
+    </div>
+</nav>
+
+<div class="search-area">
+    <div class="search-box">
+        <span>🔍</span>
+        <input type="text" placeholder="Search...">
+    </div>
+</div>
+
+
+
+<div class="hero">
+
+    <img src="sukoon.jpeg">
+
+    <div class="text">
+        
+        <h1>The Story of Us ❤️</h1>
+        <p>A Netflix Original Birthday Special</p>
+
+       <button onclick="openSong()">▶ Play</button>
+        <button id="myListBtn" onclick="toggleMyList()">+ My List</button>
+        <div id="myListMessage">
+    ❤️ Added to My List
+    <br>
+    <span>A collection of our favorite memories.</span>
+</div>
+    </div>
+
+</div>
+<div id="songScreen" class="song-screen">
+
+    <button class="back-button" onclick="closeSong()">← Back</button>
+
+    <video id="songVideo" controls>
+    <source src="song.mp4" type="video/mp4">
+</video>
+
+</div>
+
+
+<h2 class="heading">Episodes</h2>
+
+
+<div class="episodes">
+
+    <a href="episode1.html" class="card">
+        <h3>Episode 1</h3>
+        <p>How it all started ✨</p>
+    </a>
+
+
+    <a href="episode2.html" class="card">
+        <h3>Episode 2</h3>
+        <p>Our favourite memories ❤️</p>
+    </a>
+
+
+    <a href="birthday.html" class="card">
+        <h3>Episode 3</h3>
+        <p>Birthday Special 🎂</p>
+    </a>
+
+</div>
+
+
+</body>
+
+</html>
+<script>
+
+function openSong() {
+
+    const screen = document.getElementById("songScreen");
+    const video = document.getElementById("songVideo");
+
+    screen.style.display = "flex";
+
+    video.play();
+}
+
+
+function closeSong() {
+
+    const screen = document.getElementById("songScreen");
+    const video = document.getElementById("songVideo");
+
+    video.pause();
+
+    video.currentTime = 0;
+
+    screen.style.display = "none";
+}
+
+</script>
+<script>
+
+function toggleMyList() {
+
+    const button = document.getElementById("myListBtn");
+    const message = document.getElementById("myListMessage");
+
+    if (button.innerHTML === "+ My List") {
+
+        button.innerHTML = "✓ My List";
+        message.style.display = "inline";
+
+    } else {
+
+        button.innerHTML = "+ My List";
+        message.style.display = "none";
+
+    }
+}
+</script>

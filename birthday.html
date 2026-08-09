@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="story-page">
+
+<nav class="navbar">
+    <h1 class="logo">NETFLIX</h1>
+</nav>
+
+<div class="episode-page">
+
+    <h1>🎂 Happy Birthday, Sanjana ❤️</h1>
+
+    <p>
+        Before today ends...
+        There's just one more episode I wanted you to watch.
+    </p>
+
+    <video class="birthday-video" controls>
+        <source src="birthday.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="letter">
+
+        <h2>A Letter For You ❤️</h2>
+
+        <p>
+            Happy Birthday, my love.<br><br>
+
+            Thank you for every smile, every laugh, every little memory
+            we've created together.
+
+            I hope today reminds you how loved and appreciated you are.
+
+            No matter where life takes us, these moments with you
+            will always be my favorite.
+
+            Here's to many more adventures, more laughter,
+            and many more birthdays together.
+
+            Happy Birthday once again. ❤️
+        </p>
+
+    </div>
+
+    <button onclick="showCredits()">
+        🎬 Roll Credits
+    </button>
+
+</div>
+
+<div id="credits" style="display:none;">
+
+    <h1>THE END...</h1>
+
+    <p>Created By</p>
+    <h2>Deepansh</h2>
+
+    <p>Starring</p>
+    <h2>Sanjana ❤️</h2>
+
+    <p>Genre</p>
+    <h2>Romance • Comedy • Forever</h2>
+
+    <p>Status</p>
+    <h2>Renewed For Another Season ❤️</h2>
+
+</div>
+
+<script>
+function showCredits(){
+    document.querySelector(".episode-page").style.display="none";
+    document.getElementById("credits").style.display="block";
+}
+</script>
+
+</body>
+</html>
